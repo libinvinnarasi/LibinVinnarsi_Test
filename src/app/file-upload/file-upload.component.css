@@ -1,0 +1,17 @@
+.upload-block .file-upload{
+    border-radius: 3px;
+    padding: 4px 4px;
+    border: 1px solid #ced4da;
+    width: 70%;
+}
+.upload-block label{
+    width: 100%;
+}
+
+.download{
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #5600ff;
+    letter-spacing: 1px;
+}

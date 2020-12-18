@@ -1,0 +1,29 @@
+.user-detail span{
+    display: inline-block;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6f6f6f;
+}
+.user-detail p{
+    color: #8888d0;
+    font-weight: 500;
+}
+.ed{
+    
+    border: none;
+    border-radius: 30px;
+    padding: 3px 15px;
+    font-size: 12px;
+    color: white;
+    margin: 0 5px;
+}
+.edit{
+    background: #298c96;
+}
+.delete{
+    background: #ff6060;
+}
+.card{
+    max-width: 900px;
+}

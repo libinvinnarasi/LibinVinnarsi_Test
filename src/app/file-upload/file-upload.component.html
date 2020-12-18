@@ -1,0 +1,51 @@
+
+<app-header></app-header>
+  <!-- main app container -->
+<div class="card upload-block ">
+    <h5 class="card-header">File Upload</h5>
+    <div class="card-body">
+        <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+             
+            <div class="form-group">
+                <label>certificate</label>
+                <input type="file" name="image" class="file-upload" accept="image/x-png,image/gif,image/jpeg" (change)="fileProgress($event,'certificate')" />
+                <span class="image-preview mb-3" *ngIf="cerpreviewUrl">
+                    <a href="{{cerpreviewUrl}}" class="download" download>
+                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+
+                    </a>                
+                </span> 
+                  
+            </div>
+            <div class="form-group">
+                <label>Photo</label>
+                <input type="file" name="image" class="file-upload" accept="image/x-png,image/gif,image/jpeg" (change)="fileProgress($event, 'Photo')" />
+                <span class="image-preview mb-3" *ngIf="photopreviewUrl">
+                    <a href="{{photopreviewUrl}}" class="download" download>
+                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+
+                    </a>                
+                </span> 
+            </div>
+            <div class="form-group">
+                <label>Resume</label>
+                <input type="file" name="image" class="file-upload" accept="image/x-png,image/gif,image/jpeg" (change)="fileProgress($event,'resume')" />
+                <span class="image-preview mb-3" *ngIf="resumepreviewUrl">
+                    <a href="{{resumepreviewUrl}}" class="download" download>
+                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
+
+                    </a>                
+                </span> 
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mr-1" [disabled]="!(cerpreviewUrl || photopreviewUrl || resumepreviewUrl)">Upload</button>
+            </div>
+            
+            <div class="mb-3" *ngIf="uploadedFilePath">
+                {{uploadedFilePath}}
+            </div>
+ 
+         
+        </form>
+    </div>
+</div>
